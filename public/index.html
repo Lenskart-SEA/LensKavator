@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title>Welcome to LensKavator</title>
+    </head>
+    <body>
+        Welcome to Lenskavator
+        <div id="app"></div>
+    </body>
+    <script>
+        function onload(){
+            const response = await fetch('/api/excavators');
+            const data = await response.json();
+        
+            document.getElementById('app').innerHTML = data
+        }
+        onload();
+    </script>
+</html>
