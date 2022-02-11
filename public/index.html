@@ -7,11 +7,11 @@
         <div id="app"></div>
     </body>
     <script>
-        function onload(){
+        async function onload(){
             const response = await fetch('/api/excavators');
             const data = await response.json();
         
-            document.getElementById('app').innerHTML = data
+            document.getElementById('app').innerHTML = JSON.stringify(data)
         }
         onload();
     </script>
